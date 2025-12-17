@@ -1,0 +1,123 @@
+:root {
+  /* Paleta */
+  --tea-green: #ccd5aeff;
+  --beige: #e9edc9ff;
+  --cornsilk: #fefae0ff;
+  --papaya-whip: #faedcdff;
+  --light-bronze: #d4a373ff;
+
+  /* Colores de texto */
+  --text-main: #1a1a1a; /* Negro para color principal*/
+  --text-secondary: #5f4b32; /* Marron oscuro para detalles, fechas, autor...*/
+  --text-light: #fefae0; /* Para usar sobre botones oscuros*/
+
+  /* Variables semanticas */
+  --bg-body: var(var(--cornsilk));
+  --bg-card: var(var(--beige));
+  --accent: var(var(--tea-green));
+  --cta-button: var(var(--light-bronze));
+  --cta-hover: var(var(--papaya-whip));
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(utils/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(utils/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--text-main);
+}
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--beige);
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  height: 150px;
+}
+
+header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--text-secondary);
+}
+
+main {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  h1 {
+    font-weight: 900;
+    font-size: 100px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+#recetas {
+  margin-top: 90px;
+  
+}
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.recipe-card {
+  background-color: var(--beige);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px); /* Pequeña animación al pasar el ratón */
+}
