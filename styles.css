@@ -81,6 +81,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 #inicio {
@@ -102,11 +103,15 @@ main {
 
 #recetas {
   margin-top: 90px;
-  
+
+  h2 {
+    font-weight: 900;
+    font-size: 70px;
+  }
 }
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
 }
